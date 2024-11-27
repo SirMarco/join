@@ -1,0 +1,41 @@
+h1,
+h2 {
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 110px 96px;
+}
+
+.headline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headline h1 {
+  margin-bottom: 16px;
+}
+
+.headline img {
+  width: 32px;
+  height: 32px;
+}
+
+.hightlight-join {
+  color: var(--blue-light);
+}
+
+@media (max-width:1300px) {
+  main {
+    margin: 0;
+  }
+}
+
+@media (max-width:640px) {
+  .wrapper {
+    margin: 16px 16px;
+  }
+}

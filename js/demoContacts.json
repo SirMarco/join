@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Max Mustermann",
+    "email": "max.mustermann@live.com",
+    "phone": "015112345678"
+  },
+  {
+    "name": "Anna Schmidt",
+    "email": "anna.schmidt@food.org",
+    "phone": "022112345678"
+  },
+  {
+    "name": "Johann Müller",
+    "email": "johann.mueller@gmail.net",
+    "phone": "030112345678"
+  },
+  {
+    "name": "Sarah Meier",
+    "email": "sarah.meier@coldmail.com",
+    "phone": "049112345678"
+  },
+  {
+    "name": "Michaela Wagner",
+    "email": "michaela.wagner@wagner.org",
+    "phone": "055112345678"
+  },
+  {
+    "name": "Thomas Becker",
+    "email": "thomas.becker@trafficelights.net",
+    "phone": "066112345678"
+  },
+  {
+    "name": "Julia Hofmann",
+    "email": "julia.hofmann@mail.com",
+    "phone": "076112345678"
+  },
+  {
+    "name": "Daniel Schulz",
+    "email": "daniel.schulz@web.org",
+    "phone": "089112345678"
+  },
+  {
+    "name": "Laura Richter",
+    "email": "laura.richter@world.net",
+    "phone": "099112345678"
+  },
+  {
+    "name": "Kevin Fischer",
+    "email": "kevin.fischer@fish.com",
+    "phone": "002112345678"
+  }
+]

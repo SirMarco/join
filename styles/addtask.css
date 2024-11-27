@@ -1,0 +1,1017 @@
+main {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: auto;
+    font: inherit;
+    padding-bottom: 100px;
+}
+
+.title {
+    align-self: flex-start;
+    font-size: 61px;
+    font-weight: bold;
+}
+
+.title:focus {
+    outline: none;
+}
+
+.mobile-title {
+    display: none;
+    align-self: flex-start;
+    font-size: 61px;
+    font-weight: bold;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+
+.task-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 75px;
+}
+
+.task-form-container {
+    display: flex;
+    gap: 35px;
+
+}
+
+.info-text {
+    padding-top: 220px;
+}
+
+.prio-selection-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.prio-selection-container-edit {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+
+.addTaskSeperationLine {
+    margin-top: -140px;
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    font-size: 20px;
+    min-width: 440px;
+}
+
+#titleInput,
+#titleInputEdit {
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    border: solid 1px;
+    border-color: #D1D1D1;
+    padding: 10px;
+    margin-top: 8px;
+    font-size: 18px;
+}
+
+#errortitleInput {
+    position: absolute;
+    padding-left: 10px;
+    padding-top: 5px;
+    color: red;
+    font-size: 15px;
+}
+
+#descriptionInput,
+#descriptionInputEdit {
+    width: 100%;
+    height: 150px;
+    background-color: white;
+    border-radius: 10px;
+    border: solid 1px #D1D1D1;
+    padding: 10px;
+    margin-top: 8px;
+    font-size: 18px;
+    font: inherit;
+}
+
+#descriptionInput {
+    outline: none;
+}
+
+#descriptionInput::placeholder {
+    font-size: 20px;
+}
+
+
+
+.assignment-dropdown {
+    width: 100%;
+    position: relative;
+    margin-top: 8px;
+}
+
+#assignmentSelect {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    border: solid 1px #D1D1D1;
+    cursor: pointer;
+}
+
+#dropdownIcon:hover {
+    background-color: #D1D1D1;
+    border-radius: 20px;
+}
+
+#assignmentDropdownList {
+    display: none;
+    position: absolute;
+    z-index: 500;
+    width: 100%;
+    flex-direction: column;
+    padding: 5px;
+    background-color: white;
+    border-radius: 10px;
+    height: 150px;
+    gap: 3px;
+    margin-top: 5px;
+    box-shadow: 0px 0px 4px 0px #0000001A;
+    overflow-y: scroll;
+}
+
+.assignment-dropdown-list-entry {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px;
+}
+
+.assignment-dropdown-list-entry img {
+    margin-right: 20px;
+}
+
+.assignment-dropdown-list-entry:hover {
+    background-color: #efefef;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.selected {
+    border-radius: 10px;
+    color: white;
+    background-color: #2A3647;
+}
+
+.selected:hover {
+    background-color: #091931 !important;
+}
+
+.contact-option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-left: 15px;
+}
+
+.contact-option div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #29ABE2;
+    border-radius: 50%;
+    padding: 10px 5px;
+    height: 40px;
+    width: 40px;
+    font-size: 16px;
+    color: white;
+    border: solid 2px white;
+}
+
+.cardInitialAssignedToAddTask {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: var(--white);
+    font-size: 18px;
+    border: 2px solid var(--white);
+}
+
+#renderedAssignedToContacts {
+    position: absolute;
+    display: flex;
+    gap: 5px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    font-size: 20px;
+    margin-top: 105px;
+}
+
+#dueDateInput,
+#dueDateInputEdit {
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    border: solid 1px #D1D1D1;
+    padding: 10px;
+    margin-top: 8px;
+    font-size: 18px;
+}
+
+#errordueDateInput {
+    position: absolute;
+    padding-left: 10px;
+    padding-top: 5px;
+    color: red;
+    font-size: 15px;
+}
+
+#urgentButton {
+    height: 56px;
+    width: 136px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 10px 16px 10px 16px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: solid 1px #D1D1D1;
+    gap: 8px;
+    box-shadow: 0px 0px 4px 0px #0000001A;
+    cursor: pointer;
+}
+
+#mediumButton {
+    height: 56px;
+    width: 136px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 10px 16px 10px 16px;
+    font-size: 20px;
+    background-color: white;
+    border-radius: 10px;
+    border: solid 1px #D1D1D1;
+    gap: 8px;
+    box-shadow: 0px 0px 4px 0px #0000001A;
+    cursor: pointer;
+}
+
+#lowButton {
+    height: 56px;
+    width: 136px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 10px 16px 10px 16px;
+    font-size: 20px;
+    background-color: white;
+    border-radius: 10px;
+    border: solid 1px #D1D1D1;
+    gap: 8px;
+    box-shadow: 0px 0px 4px 0px #0000001A;
+    cursor: pointer;
+}
+
+#urgentButtonEdit {
+    height: 56px;
+    width: 136px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 10px 16px 10px 16px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: solid 1px #D1D1D1;
+    gap: 8px;
+    box-shadow: 0px 0px 4px 0px #0000001A;
+    cursor: pointer;
+}
+
+#mediumButtonEdit {
+    height: 56px;
+    width: 136px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 10px 16px 10px 16px;
+    font-size: 20px;
+    background-color: white;
+    border-radius: 10px;
+    border: solid 1px #D1D1D1;
+    gap: 8px;
+    box-shadow: 0px 0px 4px 0px #0000001A;
+    cursor: pointer;
+}
+
+#lowButtonEdit {
+    height: 56px;
+    width: 136px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 10px 16px 10px 16px;
+    font-size: 20px;
+    background-color: white;
+    border-radius: 10px;
+    border: solid 1px #D1D1D1;
+    gap: 8px;
+    box-shadow: 0px 0px 4px 0px #0000001A;
+    cursor: pointer;
+}
+
+
+.urgent {
+    background-color: #FF3D00 !important;
+    color: white;
+}
+
+.medium {
+    background-color: #FFA800 !important;
+    color: white;
+}
+
+.low {
+    background-color: #7AE229 !important;
+    color: white;
+}
+
+
+
+.category-dropdown {
+    width: 440px;
+    position: relative;
+    margin-top: 8px;
+}
+
+#categorySelect {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    border: solid 1px;
+    border-color: #D1D1D1;
+    cursor: pointer;
+}
+
+
+#categoryDropdownList {
+    display: none;
+    position: absolute;
+    z-index: 500;
+    flex-direction: column;
+    list-style: none;
+    padding: 5px;
+    background-color: white;
+    border-radius: 10px;
+    height: 100px;
+    gap: 8px;
+    margin-top: 5px;
+    box-shadow: 0px 0px 4px 0px #0000001A;
+    overflow-y: scroll;
+    width: 100%;
+}
+
+.category-dropdown-list-entry {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+}
+
+.category-dropdown-list-entry img {
+    margin-right: 20px;
+}
+
+#dropdownIconCategory:hover {
+    background-color: #D1D1D1;
+    border-radius: 20px;
+}
+
+.category-dropdown-list-entry:hover {
+    background-color: #efefef;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+.category-option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-left: 15px;
+}
+
+
+#errorcategorySelect {
+    position: absolute;
+    padding-left: 10px;
+    padding-top: 5px;
+    color: red;
+    font-size: 15px;
+}
+
+#subtasksInput {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border: solid 1px #D1D1D1;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 8px;
+}
+
+#subtasksInput img:hover {
+    cursor: pointer;
+    background-color: #D1D1D1;
+    border-radius: 10px;
+}
+
+#subTaskInput {
+    background-color: white;
+    width: 100%;
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+#subTaskInput:focus {
+    outline: none;
+}
+
+#imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#subtasksList {
+    display: flex;
+    position: relative;
+    width: 440px;
+    height: 110px;
+    flex-direction: column;
+    overflow-y: auto;
+    gap: 5px;
+    margin-top: 5px;
+    overflow-x: hidden;
+}
+
+.subtasks-list-entry {
+    width: 440px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    cursor: pointer;
+    padding-right: 8px;
+}
+
+.subtasks-list-entry:hover {
+    background-color: rgb(222, 222, 222);
+}
+
+.subtasks-list-entry li {
+    display: list-item;
+    height: 40px;
+    padding-left: 30px;
+    padding-top: 7px;
+}
+
+.subtasks-list-entry li input {
+    padding: 5px;
+}
+
+#subtaskIcons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10px;
+    gap: 5px;
+}
+
+#subtaskEditInput {
+    border-radius: 10px;
+    padding-left: 10px;
+    height: 25px;
+    width: 250px;
+    background-color: transparent;
+    outline: none;
+}
+
+#subtasksInputEdit {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border: solid 1px #D1D1D1;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 8px;
+}
+
+#subtasksInputEdit img:hover {
+    cursor: pointer;
+    background-color: #D1D1D1;
+    border-radius: 10px;
+}
+
+#subTaskInputEdit {
+    background-color: white;
+    width: 100%;
+    font-size: 18px;
+    padding-left: 10px;
+    border: none;
+    border-radius: 0%;
+    padding: 5px;
+}
+
+#subTaskInputEdit:focus {
+    outline: none;
+}
+
+#imageContainerEdit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#subtasksListEdit {
+    display: flex;
+    height: 160px;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.subtasks-list-entry-edit {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    cursor: pointer;
+    padding-right: 8px;
+}
+
+.subtasks-list-entry-edit:hover {
+    background-color: rgb(222, 222, 222);
+}
+
+.subtasks-list-entry-edit li {
+    display: list-item;
+    height: 40px;
+    padding-left: 30px;
+    padding-top: 7px;
+}
+
+.subtasks-list-entry-edit li input {
+    padding: 5px;
+}
+
+#subtaskIconsEdit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10px;
+    gap: 5px;
+}
+
+#subtaskEditInputEdit {
+    border-radius: 10px;
+    padding-left: 10px;
+    height: 25px;
+    width: 300px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.addTasksButtons {
+    display: flex;
+    gap: 16px;
+}
+
+#clearButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 56px;
+    width: 110px;
+    border-radius: 10px;
+    border: solid 1px #2A3647;
+    background-color: #F6F7F8;
+    padding: 16px;
+    font-size: 20px;
+    font-weight: lighter;
+    color: #2A3647;
+}
+
+#clearButtonMobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 56px;
+    width: 110px;
+    border-radius: 10px;
+    border: solid 1px #2A3647;
+    background-color: #F6F7F8;
+    padding: 16px;
+    font-size: 20px;
+    font-weight: lighter;
+    color: #2A3647;
+}
+
+#clearButtonMobile:hover {
+    cursor: pointer;
+    color: #29ABE2;
+    border-color: #29ABE2;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+#clearButton:hover {
+    cursor: pointer;
+    color: #29ABE2;
+    border-color: #29ABE2;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
+}
+
+#createTaskButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 56px;
+    width: 183px;
+    border-radius: 10px;
+    border: none;
+    background-color: #2A3647;
+    padding: 16px;
+    font-size: 20px;
+    font-weight: lighter;
+    color: white;
+}
+
+#createTaskButtonMobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 56px;
+    width: 183px;
+    border-radius: 10px;
+    border: none;
+    background-color: #2A3647;
+    padding: 16px;
+    font-size: 18px;
+    font-weight: lighter;
+    color: white;
+    gap: 8px;
+}
+
+#createTaskButton:hover {
+    cursor: pointer;
+    background-color: #29ABE2;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
+}
+
+#createTaskButtonMobile:hover {
+    cursor: pointer;
+    background-color: #29ABE2;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.info {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transform: translateX(200%);
+    transition: all 425ms ease-in-out;
+}
+
+.infoButton {
+    display: flex;
+    width: 326px;
+    height: 74px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background: #2A3647;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+    font-size: 20px;
+    color: var(--white);
+}
+
+.info-slideIn {
+    transform: translateX(0);
+}
+
+@media (max-width: 1400px) {
+    .task-form {
+        padding-left: 25px;
+    }
+
+}
+
+@media (max-width: 1300px) {
+    main {
+        margin: 0;
+    }
+
+    .task-form {
+        padding-left: 0px;
+        margin-left: 0px;
+        padding-bottom: 75px;
+    }
+
+    .title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+@media (min-width: 1101px) {
+    .mobile-button {
+        display: none;
+    }
+}
+
+@media (max-width: 1100px) {
+
+    main {
+        padding: 0;
+        height: calc(100vh - 380px);
+        flex-grow: 1;
+        padding-bottom: 100px
+    }
+
+    .mobile-button {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 80px;
+        background-color: var(--background);
+    }
+
+    .buttons {
+        display: flex;
+        gap: 32px;
+    }
+
+    .addTasksButtons {
+        display: none;
+    }
+
+    .task-form {
+        padding-top: 30px;
+    }
+
+    .task-form-container {
+        flex-direction: column;
+    }
+
+    .addTaskSeperationLine {
+        display: none;
+        margin-top: 0;
+    }
+
+    .info-text {
+        display: none;
+    }
+
+    .left-column {
+        margin-bottom: 35px;
+        gap: 30px;
+    }
+
+    .right-column {
+        margin-top: 0;
+        gap: 30px;
+    }
+
+    .title {
+        display: none;
+    }
+
+    .mobile-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 20px;
+        width: 100%;
+        padding-left: 0;
+        padding-bottom: 20px;
+
+    }
+}
+
+@media (max-width: 500px) {
+    main {
+        padding: 0;
+        height: calc(100vh - 380px);
+        padding-bottom: 100px
+    }
+
+    .task-form {
+        padding-top: 0;
+    }
+
+    .task-form-container {
+        gap: 25px;
+    }
+
+    .mobile-title {
+        font-size: 51px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .left-column {
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        gap: 16px;
+        margin-bottom: 25px;
+    }
+
+    #titleInput {
+        width: 280px;
+    }
+
+    #descriptionInput {
+        width: 280px;
+        font-size: 16px;
+        height: 100px;
+    }
+
+    #descriptionInput::placeholder {
+        font-size: 16px;
+    }
+
+    .assignment-dropdown {
+        width: 280px;
+    }
+
+    #assignmentSelect {
+        width: 280px;
+    }
+
+    .cardInitialAssignedTo {
+        height: 30px;
+        width: 30px;
+        font-size: 12px;
+    }
+
+    .right-column {
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        gap: 16px;
+    }
+
+    #dueDateInput {
+        width: 280px;
+    }
+
+    .addTasksButtons {
+        display: none;
+    }
+
+    .mobile-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        gap: 8px;
+    }
+
+    .buttons {
+        gap: 16px;
+    }
+
+    #urgentButton {
+        height: 41px;
+        width: 85px;
+        font-size: 13px;
+    }
+
+    #mediumButton {
+        height: 41px;
+        width: 85px;
+        font-size: 13px;
+        gap: 3px;
+    }
+
+    #lowButton {
+        height: 41px;
+        width: 85px;
+        font-size: 13px;
+    }
+
+    .category-dropdown {
+        width: 270px;
+    }
+
+    #categorySelect {
+        width: 280px;
+        margin-left: -5px;
+    }
+
+    .info-text-mobile {
+        font-size: 10px;
+    }
+
+    #subtasksInput {
+        width: 280px;
+    }
+
+    #subtasksList {
+        width: 280px;
+    }
+
+    .subtasks-list-entry {
+        width: 280px;
+    }
+
+    .subtasks-list-entry li {
+        padding-left: 10px;
+        padding-top: 7px;
+    }
+
+    #subtaskEditInput {
+        width: 150px;
+    }
+
+    #clearButtonMobile {
+        width: 100px;
+        height: 46px;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    #createTaskButtonMobile {
+        width: 140px;
+        height: 46px;
+        font-size: 15px;
+        padding: 12px;
+    }
+
+    .cardInitialAssignedToAddTask {
+        height: 30px;
+        width: 30px;
+        font-size: 12px;
+    }
+
+    #subtaskEditInputEdit {
+        width: 200px;
+    }
+}

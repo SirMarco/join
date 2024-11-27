@@ -1,0 +1,305 @@
+:root {
+  --blue-dark: #2A3647;
+  --blue-light: #29ABE2;
+  --white: #FFFFFF;
+  --black: #000000;
+  --red: #FF3D00;
+  --grey: #A8A8A8;
+  --grey-light: #D1D1D1;
+  --grey-bg: #F6F7F8;
+  --link-color: #CDCDCD;
+  --icon: #A8A8A8;
+  --background: #F6F8F8;
+  --hover-link: #2A3D59;
+  --active-link: #091931;
+}
+
+.categoryUserStory {
+  background-color: rgb(31, 215, 193);
+}
+
+.categoryTechnicalTask {
+  background-color: rgb(0, 56, 255);
+}
+
+
+*::-webkit-scrollbar {
+  width: 4px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--white);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--grey);
+}
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100;
+  src: url('../fonts/inter-v13-latin-100.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 200;
+  src: url('../fonts/inter-v13-latin-200.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/inter-v13-latin-300.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/inter-v13-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/inter-v13-latin-500.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/inter-v13-latin-600.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/inter-v13-latin-700.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  src: url('../fonts/inter-v13-latin-800.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/inter-v13-latin-900.woff2') format('woff2');
+}
+
+
+.font-64 {
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.font-61 {
+  font-size: 61px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.font-36 {
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.font-27 {
+  font-size: 27px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.font-27-light {
+  font-size: 27px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.font-24 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.font-24-light {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.font-21 {
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.font-21-light {
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.font-20 {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.font-20-light {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.font-16 {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.font-16-light {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.font-14 {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.font-14-light {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.black {
+  color: var(--black);
+}
+
+.white {
+  color: var(--white);
+}
+
+.blue-light {
+  color: var(--blue-light);
+}
+
+.grey {
+  color: var(--grey);
+}
+
+.backgroundNotLogin {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--background);
+  transition: ease-in-out;
+  z-index: 1000;
+}
+
+.backgroundNotLogin div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.backgroundNotLogin div img {
+  height: 50px;
+}
+
+.login-button {
+  display: flex;
+  width: 160px;
+  padding: 8px 16px 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border-radius: 10px;
+  border: 1px solid var(--blue-dark);
+  background: var(--blue-dark);
+  cursor: pointer;
+  margin-top: 40px;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: 'Inter', Arial, sans-serif;
+  background-color: var(--background);
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  max-width: 1920px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  position: relative;
+  margin: 0 0 0 232px;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.border {
+  border: 2px solid green;
+}
+
+input {
+  border: 0;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.d-none {
+  display: none;
+}
+
+@media (max-width: 1300px) {
+  header {
+    height: 80px;
+    padding: 20px 16px;
+  }
+}

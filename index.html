@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <title>Join</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="init()">
+
+  <header>
+    <div class="overlay"><img src="img/join-logo.svg" id=""></div>
+    <img src="img/join-logo.svg" id="joinLogo">
+    <div class="header-right">
+      <div>Not a Join User?</div>
+      <button id="signUpButton" onclick="openSignUpForm()">Sign Up</button>
+    </div>
+  </header>
+  <main>
+
+    <div id="signUpContainer">
+      <img src="img/go-back.svg" id="signUpGoBack" onclick="closeSignUpForm()">
+      <h1>Sign Up</h1>
+      <img src="img/login-underline.svg" id="signUpUnderline">
+      <form id="signUpForm" onsubmit="register(); return false;">
+        <div class="signUpInputs">
+          <input type="text" placeholder="Name" id="nameInputSignup" required>
+          <img src="img/person-icon.svg">
+        </div>
+        <div class="signUpInputs">
+          <input type="email" placeholder="Email" id="emailInputSignup" required>
+          <img src="img/mail.svg">
+        </div>
+        <div id="errorConfirmEmail"></div>
+        <div class="signUpInputs">
+          <input type="password" placeholder="Password" id="passwordInputSignup"
+            oninput="changePasswordIcon('passwordInputSignup', 'signUpPasswordIcon')" required>
+          <img id="signUpPasswordIcon" src="img/lock.svg">
+        </div>
+        <div id="errorConfirmEmail"></div>
+        <div class="signUpInputs">
+          <input type="password" placeholder="Confirm Password" id="confirmPasswordInputSignup"
+            oninput="changePasswordIcon('confirmPasswordInputSignup', 'signUpPasswordConfirmIcon'); comparePasswords('passwordInputSignup', 'confirmPasswordInputSignup', 'errorConfirmPassword')"
+            required>
+          <img id="signUpPasswordConfirmIcon" src="img/lock.svg">
+        </div>
+        <div id="errorConfirmPassword"></div>
+        <div class="checkBoxContainerSignup">
+          <input type="checkbox" id="checkboxInputSignup" required>
+          <div>I accept the <a href="pages/privacypolicy.html?extern=yes" target="_blank" id="checkboxLink">Privacy
+              Policy</a></div>
+        </div>
+        <button id="signUpFormButton">Sign up</button>
+      </form>
+    </div>
+    <div id="loginContainer">
+      <h1>Log in</h1>
+      <div><img src="img/login-underline.svg" id="loginUnderline"></div>
+      <form id="loginForm" onsubmit="login(); return false;">
+        <div class="loginInputs">
+          <input type="email" placeholder="Email" id="emailInputLogin" required>
+          <img src="img/mail.svg">
+        </div>
+        <div class="loginInputs">
+          <input type="password" placeholder="Password" id="passwordInputLogin"
+            oninput="changePasswordIcon('passwordInputLogin', 'passwordIcon')" required>
+          <img id="passwordIcon" src="img/lock.svg">
+        </div>
+        <div id="errorLogin"></div>
+        <div class="checkBoxContainerLogin">
+          <input type="checkbox" id="checkboxInputLogin">
+          <div>Remember me</div>
+        </div>
+        <div id="loginButtons">
+          <button id="loginButton">Log in</button>
+          <button id="guestLoginButton" onclick="guestLogin()">Guest Log in</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="signUpMobile">
+      <div>Not a Join User?</div>
+      <button id="signUpButtonMobile" onclick="openSignUpForm()">Sign Up</button>
+    </div>
+  </main>
+
+  <footer>
+    <a href="pages/privacypolicy.html?extern=yes" target="_blank">Privacy Policy</a>
+    <a href="pages/legalnotice.html?extern=yes" target="_blank">Legal Notice</a>
+  </footer>
+
+  <script src="js/storage.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/register.js"></script>
+  <script src="js/allpages.js"></script>
+  <script src="script.js"></script>
+
+
+</body>
+
+</html>
